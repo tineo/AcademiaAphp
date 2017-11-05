@@ -3,7 +3,7 @@
   "name": "La Academia App",
   "display": "minimal-ui",
   "start_url": "/",
-  "theme_color": "#673ab6",
+  "theme_color": "#d54e38",
   "background_color": "#111111",
   "icons": [
     {
