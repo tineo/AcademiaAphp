@@ -25,7 +25,7 @@ class User implements UserInterface
     protected $email;
 
     /**
-     * @ORM\Column(type="string", length=4  0)
+     * @ORM\Column(type="string", length=40)
      */
     protected $username;
 

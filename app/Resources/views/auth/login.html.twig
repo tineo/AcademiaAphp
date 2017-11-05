@@ -1,34 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Design Lots">
+    <meta name="theme-color" content="#CB2F1D" />
+    <link rel="icon" href="favicon.ico">
 
-{% extends 'base.html.twig' %}
+    <title>Academia</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" type="text/css" href="library/bs/css/bootstrap.min.css">
+
+    <!-- Menu Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="library/css/menuzord/menuzord.css">
+    <link rel="stylesheet" type="text/css" href="library/css/menuzord/menuzord-animations.css">
+    <link rel="stylesheet" type="text/css" href="library/css/menuzord/skins/menuzord-border-top.css">
+
+    <!-- RS5.0 Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="library/js/revolution/css/settings.css">
+    <link rel="stylesheet" type="text/css" href="library/js/revolution/css/layers.css">
+    <link rel="stylesheet" type="text/css" href="library/js/revolution/css/navigation.css">
+
+    <!-- Forms -->
+    <link rel="stylesheet" type="text/css" href="library/js/skyforms/css/sky-forms.css">
+
+    <!-- Style Sheets -->
+    <link rel="stylesheet" type="text/css" href="library/css/ie10-viewport-bug-workaround.css">
+    <link rel="stylesheet" type="text/css" href="library/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="library/css/iconmoon.css">
+    <link rel="stylesheet" type="text/css" href="library/js/owl-carousel/owl.css">
+    <link rel="stylesheet" type="text/css" href="library/js/fancybox/jquery.fancybox.css">
+    <link rel="stylesheet" type="text/css" href="library/js/anijs/anicollection.css">
+    <link rel="stylesheet" type="text/css" href="library/js/tooltipster/tooltipster.bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="library/js/slidebars/slidebars.css">
+    <link rel="stylesheet" type="text/css" href="library/css/library.css">
+    <link rel="stylesheet" type="text/css" href="library/css/responsive.css">
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <!-- Place RTL Style Sheet here -->
 
 
-{% block body %}
+    <!--[if lt IE 9]>
+    <script src="./library/bs/js/html5shiv.min.js"></script>
+    <script src="./library/bs/js/respond.min.js"></script>
+    <![endif]-->
+</head>
 
-    <div class="container">
+
+
+<body class="">
 
 
 
-        <form class="form-signin" role="form" method="POST" action="{{ path('security_login_check') }}">
 
-            <h2 class="form-signin-heading">{{ 'security.login.title'|trans }}</h2>
 
-            {% if error %}
-                <div class="alert alert-danger">
-                    {{ error.messageKey|trans(error.messageData) }}
-                </div>
-            {% endif %}
 
-            <label for="inputEmail" class="sr-only">Usuario</label>
-            <input type="text" id="username" class="form-control" placeholder="Usuario" required="" autofocus="" value="{{ last_username }}" name="_username">
-            <label for="inputPassword" class="sr-only">Password</label>
-            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="" name="_password">
-            <div class="checkbox">
-                <label>
-                    <input type="checkbox" value="remember-me">{{ 'security.login.rememberme'|trans }}
-                </label>
+
+<!-- Start Header -->
+<header id="header">
+
+
+
+
+
+    <!-- Start Main Header -->
+    <nav class="main-header header-reveal" style="display: none;">
+        <div class="container">
+
+        </div>
+    </nav>
+    <!-- End Main Header -->
+
+
+    <!-- Start Post Header -->
+    <nav class="post-header" style="display: none;">
+        <div class="container">
+            <div class="head-left">
+                <ul class="mini-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="layout-grid.html">Blog</a>
+                        <ul class="mini-sub-menu">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="layout-grid.html">Blog</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
             </div>
-            <button class="btn btn-lg btn-primary btn-block" type="submit">{{ 'security.login.submit'|trans }}</button>
+
+            <div class="head-right">
+                <em class="fa fa-phone-square feat-color"></em> 1432 543 654
+            </div>
+        </div>
+    </nav>
+    <!-- End Post Header -->
+
+
+</header>
+<!-- End Header -->
+
+
+<!-- Start Main Content -->
+<section class="main-content" id="main-content">
+    <div class="container body-content">
+        <form class="form-signin">
+            <h2 class="form-signin-heading">Iniciar sesion</h2>
+            <label for="inputEmail" class="sr-only">Usuario</label>
+            <input type="email" id="inputEmail" class="form-control" placeholder="Usuario" required autofocus>
+            <label for="inputPassword" class="sr-only">Contraseña</label>
+            <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required>
+            <div class ="checkbox" >
+                <input type ="checkbox" value ="1" id="checkboxInput" name ="" />
+                <label for ="checkboxInput" >Recuerdame </label >
+            </div >
+            <a class="btn btn-lg btn-success btn-block" type="submit" href="{{ path('dashboard') }}">Iniciar sesión</a>
         </form>
 
-    </div>
-{% endblock %}
+    </div><!-- /.container -->
+</section><!-- /.main-content -->
+
+
+
+
+
+
+
+
+<!--Start Footer -->
+<div id="footer">
+    <!-- Start Pre Footer
+    <footer class="pre-footer">
+        <div class="container">
+            <div class="foot-left">
+                <ol class="breadcrumb">
+                    <li><a href="#"><em class="fa fa-home"></em></a></li>
+                    <li><a href="#">Our Club</a></li>
+                    <li class="active">Events</li>
+                </ol>
+            </div>
+
+            <div class="foot-right">
+
+            </div>
+        </div>
+    </footer>
+     -->
+
+
+
+
+
+
+    <!-- Start Post Footer -->
+    <footer class="post-footer">
+        <div class="container">
+            <div class="foot-left">
+                <div>&copy; Dalgom <span class="copy-year"></span>. All rights reserved.</div>
+            </div>
+
+            <div class="foot-right">
+                <ul class="social-links">
+                    <li><a href="index.html#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="index.html#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="index.html#"><i class="fa fa-globe"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</div><!--/footer -->
+
+
+
+<!-- JavaScript
+   ================================================== -->
+<script src="../../../ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="library/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="library/bs/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="library/js/ie10-viewport-bug-workaround.js"></script>
+
+<script type="text/javascript" src="library/js/isotope.pkgd.min.js"></script>
+<script type="text/javascript" src="library/js/imagesloaded.pkgd.min.js"></script>
+<script type="text/javascript" src="library/js/owl-carousel/owl.carousel.min.js"></script>
+<script type="text/javascript" src="library/js/cleantabs.jquery.js"></script>
+<script type="text/javascript" src="library/js/fancybox/jquery.fancybox.js%3Fv=2.1.4"></script>
+<script type="text/javascript" src="library/js/jquery.scrollUp.min.js"></script>
+<script type="text/javascript" src="library/js/valign.js"></script>
+<script type="text/javascript" src="library/js/anijs/anijs-min.js"></script>
+<script type="text/javascript" src="library/js/anijs/anijs-helper-scrollreveal.js"></script>
+<script type="text/javascript" src="library/js/anijs/anijs-helper-dom.js"></script>
+<script type="text/javascript" src="library/js/menuzord.js"></script>
+<script type="text/javascript" src="library/js/jquery.stickit.js"></script>
+<script type="text/javascript" src="library/js/scrollIt.min.js"></script>
+<script type="text/javascript" src="library/js/jquery.countdown.min.js"></script>
+<script type="text/javascript" src="library/js/tooltipster/tooltipster.bundle.min.js"></script>
+<script type="text/javascript" src="library/js/footer-reveal.min.js"></script>
+<script type="text/javascript" src="library/js/headhesive.min.js"></script>
+<script type="text/javascript" src="library/js/jquery.stellar.min.js"></script>
+<script type="text/javascript" src="library/js/jquery.countTo.js"></script>
+<script type="text/javascript" src="library/js/typed.min.js"></script>
+<script type="text/javascript" src="library/js/jquery.waypoints.min.js"></script>
+<script type="text/javascript" src="library/js/slidebars/slidebars.min.js"></script>
+<script type="text/javascript" src="library/js/tendina.min.js"></script>
+<script type="text/javascript" src="library/js/jquery.sidr.js"></script>
+<script type="text/javascript" src="library/js/pace.js"></script>
+<script type="text/javascript" src="library/js/list.js"></script>
+<script type="text/javascript" src="library/js/jquery.fitvids.js"></script>
+
+<!-- Forms JS Files -->
+<script type="text/javascript" src="library/js/skyforms/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="library/js/skyforms/js/jquery.form.min.js"></script>
+<script type="text/javascript" src="library/js/skyforms/js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="library/js/skyforms/js/jquery.maskedinput.min.js"></script>
+<script type="text/javascript" src="library/js/skyforms/js/jquery.modal.js"></script>
+<!--[if lt IE 10]>
+<script type="text/javascript" src="./library/js/skyforms/js/jquery.placeholder.min.js"></script>
+<![endif]-->
+<!--[if lt IE 9]>
+<script type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- RS5.0 Core JS Files -->
+<script type="text/javascript" src="library/js/revolution/js/jquery.themepunch.tools.min.js%3Frev=5.0"></script>
+<script type="text/javascript" src="library/js/revolution/js/jquery.themepunch.revolution.min.js%3Frev=5.0"></script>
+<script type="text/javascript" src="library/js/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script type="text/javascript" src="library/js/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script type="text/javascript" src="library/js/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+<script type="text/javascript" src="library/js/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+
+<!-- Scripts Go -->
+<script src="js/validate-contact.js"></script>
+<script src="js/scripts.js"></script>
+
+<script src="js/jquery.backstretch.min.js"></script>
+<script>
+    $(function () {
+
+        $("#main-content").backstretch([
+            "https://scontent-mia3-1.xx.fbcdn.net/v/t1.0-9/22780322_1521954324508330_8885466174806521086_n.jpg?oh=655f43ed2784d7dcc7e89b58f1edf92c&oe=5A6AB38C"
+            , "https://scontent-mia3-1.xx.fbcdn.net/v/t1.0-9/20604308_1451093434927753_3119310469654381746_n.jpg?oh=8889da58ff05fcd7acf2f03bd68027a8&oe=5AA27501"
+        ], {duration: 5000, fade: 1100});
+    });
+</script>
+</body>
+</html>

@@ -2,12 +2,16 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\Entity\Complejo;
+use Doctrine\ORM\Query;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
 use AppBundle\Entity\User;
 use AppBundle\Form\UserType;
+use Doctrine\ORM\EntityManager;
+
 
 
 class DefaultController extends Controller
@@ -53,5 +57,59 @@ class DefaultController extends Controller
         return $this->render('auth/register.html.twig', [
             'form' => $form->createView(),
         ]);
+    }
+
+    /**
+     * @Route("/inscripciones", name="inscripciones")
+     */
+    public function inscripcionesAction(Request $request)
+    {
+        /* @var $entityManager Doctrine\ORM\EntityManager */
+        //$em = $this->getDoctrine()->getManager();
+        /*$coliseos = $this->getDoctrine()
+            ->getRepository(Complejo::class)
+            ->findAll();
+        */
+
+        $query = $this->getDoctrine()
+            ->getRepository('AppBundle:Complejo')
+            ->createQueryBuilder('c')
+            ->getQuery();
+        $complejos = $query->getResult(Query::HYDRATE_ARRAY);
+
+        $query = $this->getDoctrine()
+            ->getRepository('AppBundle:Complejo')
+            ->createQueryBuilder('c')
+            ->getQuery();
+        $complejos = $query->getResult(Query::HYDRATE_ARRAY);
+
+        //var_dump($complejos);
+
+        // replace this example code with whatever you need
+        return $this->render('inscripciones/inscripcion.html.twig',
+            [ "complejos" => $complejos ]
+        );
+    }
+
+    /**
+     * @Route("/dashboard/alumno", name="alumno")
+     */
+    public function dashboardAction(Request $request)
+    {
+        // replace this example code with whatever you need
+        return $this->render('dashboard/alumno.html.twig',[
+            "row_fluid" => "row_fluid",
+            "condense_menu" => "condense-menu",
+            "pagesd_mobile" => "mini mini-mobile"
+        ]);
+    }
+
+    /**
+     * @Route("/dashboard/horarios", name="horarios")
+     */
+    public function dashboard2Action(Request $request)
+    {
+        // replace this example code with whatever you need
+        return $this->render('dashboard/horarios.html.twig',[]);
     }
 }

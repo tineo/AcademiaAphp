@@ -1,76 +1,943 @@
-{% extends 'base.html.twig' %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Dalgom">
+    <meta name="theme-color" content="#CB2F1D" />
+    <link rel="icon" href="favicon.ico">
 
-{% block body %}
-    <div id="wrapper">
-        <div id="container">
-            <div id="welcome">
-                <h1><span>Welcome to</span> Symfony {{ constant('Symfony\\Component\\HttpKernel\\Kernel::VERSION') }}</h1>
+    <title>Academia</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" type="text/css" href="library/bs/css/bootstrap.min.css">
+
+    <!-- Menu Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="library/css/menuzord/menuzord.css">
+    <link rel="stylesheet" type="text/css" href="library/css/menuzord/menuzord-animations.css">
+    <link rel="stylesheet" type="text/css" href="library/css/menuzord/skins/menuzord-border-top.css">
+
+    <!-- RS5.0 Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="library/js/revolution/css/settings.css">
+    <link rel="stylesheet" type="text/css" href="library/js/revolution/css/layers.css">
+    <link rel="stylesheet" type="text/css" href="library/js/revolution/css/navigation.css">
+
+    <!-- Forms -->
+    <link rel="stylesheet" type="text/css" href="library/js/skyforms/css/sky-forms.css">
+
+    <!-- Style Sheets -->
+    <link rel="stylesheet" type="text/css" href="library/css/ie10-viewport-bug-workaround.css">
+    <link rel="stylesheet" type="text/css" href="library/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="library/css/iconmoon.css">
+    <link rel="stylesheet" type="text/css" href="library/js/owl-carousel/owl.css">
+    <link rel="stylesheet" type="text/css" href="library/js/fancybox/jquery.fancybox.css">
+    <link rel="stylesheet" type="text/css" href="library/js/anijs/anicollection.css">
+    <link rel="stylesheet" type="text/css" href="library/js/tooltipster/tooltipster.bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="library/js/slidebars/slidebars.css">
+    <link rel="stylesheet" type="text/css" href="library/css/library.css">
+    <link rel="stylesheet" type="text/css" href="library/css/responsive.css">
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <!-- Place RTL Style Sheet here -->
+
+
+    <!--[if lt IE 9]>
+    <script src="./library/bs/js/html5shiv.min.js"></script>
+    <script src="./library/bs/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+
+
+<body class="">
+
+
+<!-- Start Full Screen Overlay -->
+<div class="canvas-overlay">
+    <!-- Close Button -->
+    <a class="overlay-btn btn-closer" href="index.html#"></a>
+    <!-- Content Container -->
+    <div class="container" data-anijs="if: scroll, on:window, do: fadeInDown animated, before: scrollReveal, after: $fireOnce removeAnim ">
+        <h2>Search Website</h2>
+        <form class="search-hero">
+            <div class="input-group">
+                <label class="input">
+                    <input type="text" class="form-control" placeholder="Search for...">
+                </label>
+                <span class="input-group-btn">
+	    					<button class="btn btn-success" type="button">Search</button>
+	    				</span>
+            </div>
+        </form>
+
+        <br/><br/>
+        <div class="row">
+            <div class="col-sm-4">
+                <h3>Quick Links</h3>
+                <ul class="list-styled list-bordered">
+                    <li><a href="index.html">Home page</a></li>
+                    <li><a href="teams.html">Our teams</a></li>
+                    <li><a href="contact.html">Get in touch</a></li>
+                </ul>
             </div>
 
-            <div id="status">
-                <p>
-                    <svg id="icon-status" width="1792" height="1792" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1671 566q0 40-28 68l-724 724-136 136q-28 28-68 28t-68-28l-136-136-362-362q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 295 656-657q28-28 68-28t68 28l136 136q28 28 28 68z" fill="#759E1A"/></svg>
-
-                    Your application is now ready. You can start working on it at:
-                    <code>{{ base_dir }}</code>
-                </p>
+            <div class="col-sm-4">
+                <h3>Recent Posts</h3>
+                <ul class="list-styled list-bordered">
+                    <li><a href="post-standard.html">Nominated club of the year</a></li>
+                    <li><a href="post-standard.html">Pre season camp success</a></li>
+                    <li><a href="post-standard.html">Road to the grand finals</a></li>
+                </ul>
             </div>
 
-            <div id="next">
-                <h2>What's next?</h2>
-                <p>
-                    <svg id="icon-book" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="-12.5 9 64 64" enable-background="new -12.5 9 64 64" xml:space="preserve">
-                        <path fill="#AAA" d="M6.8,40.8c2.4,0.8,4.5-0.7,4.9-2.5c0.2-1.2-0.3-2.1-1.3-3.2l-0.8-0.8c-0.4-0.5-0.6-1.3-0.2-1.9
-                            c0.4-0.5,0.9-0.8,1.8-0.5c1.3,0.4,1.9,1.3,2.9,2.2c-0.4,1.4-0.7,2.9-0.9,4.2l-0.2,1c-0.7,4-1.3,6.2-2.7,7.5
-                            c-0.3,0.3-0.7,0.5-1.3,0.6c-0.3,0-0.4-0.3-0.4-0.3c0-0.3,0.2-0.3,0.3-0.4c0.2-0.1,0.5-0.3,0.4-0.8c0-0.7-0.6-1.3-1.3-1.3
-                            c-0.6,0-1.4,0.6-1.4,1.7s1,1.9,2.4,1.8c0.8,0,2.5-0.3,4.2-2.5c2-2.5,2.5-5.4,2.9-7.4l0.5-2.8c0.3,0,0.5,0.1,0.8,0.1
-                            c2.4,0.1,3.7-1.3,3.7-2.3c0-0.6-0.3-1.2-0.9-1.2c-0.4,0-0.8,0.3-1,0.8c-0.1,0.6,0.8,1.1,0.1,1.5c-0.5,0.3-1.4,0.6-2.7,0.4l0.3-1.3
-                            c0.5-2.6,1-5.7,3.2-5.8c0.2,0,0.8,0,0.8,0.4c0,0.2,0,0.2-0.2,0.5c-0.2,0.3-0.3,0.4-0.2,0.7c0,0.7,0.5,1.1,1.2,1.1
-                            c0.9,0,1.2-1,1.2-1.4c0-1.2-1.2-1.8-2.6-1.8c-1.5,0.1-2.8,0.9-3.7,2.1c-1.1,1.3-1.8,2.9-2.3,4.5c-0.9-0.8-1.6-1.8-3.1-2.3
-                            c-1.1-0.7-2.3-0.5-3.4,0.3c-0.5,0.4-0.8,1-1,1.6c-0.4,1.5,0.4,2.9,0.8,3.4l0.9,1c0.2,0.2,0.6,0.8,0.4,1.5c-0.3,0.8-1.2,1.3-2.1,1
-                            c-0.4-0.2-1-0.5-0.9-0.9c0.1-0.2,0.2-0.3,0.3-0.5s0.1-0.3,0.1-0.3c0.2-0.6-0.1-1.4-0.7-1.6c-0.6-0.2-1.2,0-1.3,0.8
-                            C4.3,38.4,4.7,40,6.8,40.8z M46.1,20.9c0-4.2-3.2-7.5-7.1-7.5h-3.8C34.8,10.8,32.7,9,30.2,9L-2.3,9.1c-2.8,0.1-4.9,2.4-4.9,5.4
-                            L-7,58.6c0,4.8,8.1,13.9,11.6,14.1l34.7-0.1c3.9,0,7-3.4,7-7.6L46.1,20.9z M-0.3,36.4c0-8.6,6.5-15.6,14.5-15.6
-                            c8,0,14.5,7,14.5,15.6S22.1,52,14.2,52C6.1,52-0.3,45-0.3,36.4z M42.1,65.1c0,1.8-1.5,3.1-3.1,3.1H4.6c-0.7,0-3-1.8-4.5-4.4h30.4
-                            c2.8,0,5-2.4,5-5.4V17.9h3.7c1.6,0,2.9,1.4,2.9,3.1V65.1L42.1,65.1z"/>
-                    </svg>
-
-                    Read the documentation to learn
-                    <a href="https://symfony.com/doc/{{ constant('Symfony\\Component\\HttpKernel\\Kernel::VERSION')[:3] }}/page_creation.html">
-                        How to create your first page in Symfony
-                    </a>
-                </p>
+            <div class="col-sm-4">
+                <h3>Follow Us</h3>
+                <ul class="social-links sl-vertical list-bordered">
+                    <li><a href="index.html#"><i class="fa fa-facebook"></i>Facebook</a></li>
+                    <li><a href="index.html#"><i class="fa fa-twitter"></i>Twitter</a></li>
+                    <li><a href="index.html#"><i class="fa fa-globe"></i>Website</a></li>
+                </ul>
             </div>
-
         </div>
     </div>
-{% endblock %}
+</div>
+<!-- End Full Screen Overlay -->
 
-{% block stylesheets %}
-<style>
-    body { background: #F5F5F5; font: 18px/1.5 sans-serif; }
-    h1, h2 { line-height: 1.2; margin: 0 0 .5em; }
-    h1 { font-size: 36px; }
-    h2 { font-size: 21px; margin-bottom: 1em; }
-    p { margin: 0 0 1em 0; }
-    a { color: #0000F0; }
-    a:hover { text-decoration: none; }
-    code { background: #F5F5F5; max-width: 100px; padding: 2px 6px; word-wrap: break-word; }
-    #wrapper { background: #FFF; margin: 1em auto; max-width: 800px; width: 95%; }
-    #container { padding: 2em; }
-    #welcome, #status { margin-bottom: 2em; }
-    #welcome h1 span { display: block; font-size: 75%; }
-    #icon-status, #icon-book { float: left; height: 64px; margin-right: 1em; margin-top: -4px; width: 64px; }
-    #icon-book { display: none; }
 
-    @media (min-width: 768px) {
-        #wrapper { width: 80%; margin: 2em auto; }
-        #icon-book { display: inline-block; }
-        #status a, #next a { display: block; }
 
-        @-webkit-keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
-        @keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
-        .sf-toolbar { opacity: 0; -webkit-animation: fade-in 1s .2s forwards; animation: fade-in 1s .2s forwards;}
-    }
-</style>
-{% endblock %}
+
+<!-- Start Header -->
+<header id="header">
+
+    <!-- Start Pre Header -->
+    <!--<nav class="pre-header">
+        <div class="container">
+            <div class="head-left">
+                <ul class="social-links sl-circle">
+                    <li><a href="index.html#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="index.html#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="index.html#"><i class="fa fa-globe"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="head-right">
+                <strong>Next Game:</strong> <div id="clock"></div>
+            </div>
+        </div>
+    </nav>-->
+    <!-- End Pre Header -->
+
+
+
+    <!-- Start Main Header -->
+    <nav class="main-header header-reveal">
+        <div class="container">
+            <!-- Start Menu -->
+            <div id="menuzord" class="menuzord">
+                <div class="head-left">
+                    <a href="index.html" class="menuzord-brand">
+                        <!-- Sport <div class="tag-line">Sporting Club Theme</div> -->
+                        <img class="logo-img" src="img/logo@2x.png" alt="Logo" />
+                    </a>
+                </div>
+
+                <ul class="menuzord-menu head-right">
+                    <!--li class="active"><a href="index.html">Home Pages</a>
+                        <ul class="dropdown">
+                            <li><a href="index.html">Home 1</a></li>
+                            <li><a href="index-2.html">Home 2</a></li>
+                            <li><a href="index-3.html">Home 3</a></li>
+                            <li><a href="index-4.html">Home 4</a></li>
+                        </ul>-->
+                    </li>
+                    <!--li><a href="header-layouts.html">Feature Pages</a>
+                        <ul class="dropdown">
+                            <li><a href="events.html">Event Listings</a>
+                                <ul class="dropdown">
+                                    <li><a href="events.html">Events List</a></li>
+                                    <li><a href="events-calendar.html">Event Calendar</a></li>
+                                    <li><a href="event-timetable.html">Event Timetable</a></li>
+                                    <li><a href="event.html">Single Event</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="fixtures.html">Fixtures &amp; Tables</a>
+                                <ul class="dropdown">
+                                    <li><a href="fixtures.html">Game Fixtures</a></li>
+                                    <li><a href="fixtures-alt.html">Game Fixtures Alt</a></li>
+                                    <li><a href="points-leaderboard.html">Points Leaderboard</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="gallery-isotope.html">Galleries</a>
+                                <ul class="dropdown">
+                                    <li><a href="gallery-isotope.html">Gallery Isotope</a></li>
+                                    <li><a href="gallery-slider.html">Gallery Slider</a></li>
+                                    <li><a href="gallery-grid.html">Gallery Grid</a></li>
+                                    <li><a href="gallery-video.html">Gallery Video</a></li>
+                                    <li><a href="gallery-lightbox.html">Gallery Lightbox</a></li>
+                                    <li><a href="gallery-project.html">Gallery Project</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="teams.html">Teams</a>
+                                <ul class="dropdown">
+                                    <li><a href="teams.html">Teams Overview</a></li>
+                                    <li><a href="team-single.html">Team Single</a></li>
+                                    <li><a href="teams-member.html">Team Member</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="shop.html">Online Store</a>
+                                <ul class="dropdown">
+                                    <li><a href="shop.html">Store Catalogue</a></li>
+                                    <li><a href="shop-item.html">Store Item</a></li>
+                                    <li><a href="shop-cart.html">Store Cart</a></li>
+                                    <li><a href="shop-checkout.html">Store Checkout</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="pricing.html">Pricing</a>
+                                <ul class="dropdown">
+                                    <li><a href="pricing.html">Membership Price</a></li>
+                                    <li><a href="pricing-vert.html">Membership Price Alt</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="sitemap.html">Sitemap</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="faq.html">Frequent Questions</a></li>
+                            <li><a href="typography.html">Typography</a></li>
+                            <li><a href="form.html">Forms</a></li>
+                            <li><a href="icons.html">Icons Sets</a></li>
+                            <li><a href="widgets.html">Widgets</a></li>
+                            <li><a href="page-not-found.html">404 page</a></li>
+                            <li><a href="header-layouts.html">Header Layouts</a></li>
+                        </ul>
+                    </li>-->
+                    <li><a href="/login">INGRESAR</a>
+
+                    </li>
+                    <!--li><a href="layout-grid.html">Blog Layouts</a>
+                        <ul class="dropdown">
+                            <li><a href="layout-grid.html">Grid Layouts</a>
+                                <ul class="dropdown dropdown-left">
+                                    <li><a href="layout-grid-2.html">Grid 2 Column</a></li>
+                                    <li><a href="layout-grid-3.html">Grid 3 Column</a></li>
+                                    <li><a href="layout-grid-4.html">Grid 4 Column</a></li>
+                                    <li><a href="layout-bricks.html">Grid Bricks</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="layout-side-left.html">Sidebar Layouts</a>
+                                <ul class="dropdown dropdown-left">
+                                    <li><a href="layout-side-left.html">Sidebar left</a></li>
+                                    <li><a href="layout-side-right.html">Sidebar Right</a></li>
+                                    <li><a href="layout-side-left-right.html">Sidebar Left &amp; Right</a></li>
+                                    <li><a href="layout-side-mini-main.html">Sidebar Mini &amp; Main</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="post-standard.html">Post Layouts</a>
+                                <ul class="dropdown dropdown-left">
+                                    <li><a href="post-standard.html">Post Standard</a></li>
+                                    <li><a href="post-video.html">Post Video</a></li>
+                                    <li><a href="post-gallery.html">Post Gallery</a></li>
+                                    <li><a href="post-review.html">Post Review</a></li>
+                                    <li><a href="post-feature.html">Post Big Feature</a></li>
+                                    <li><a href="post-feature-parallax.html">Post Parallax Feature</a></li>
+                                    <li><a href="post-narrow.html">Post Narrow</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="archive-list.html">Archive List</a></li>
+                            <li><a href="archive-standard.html">Archive Standard</a></li>
+                        </ul>
+                    </li>-->
+
+                </ul>
+            </div><!--/.menuzord -->
+        </div>
+    </nav>
+    <!-- End Main Header -->
+
+
+    <!-- Start Post Header -->
+    <nav class="post-header">
+        <div class="container">
+            <div class="head-left">
+                <ul class="mini-nav">
+                    {# <li><a href="index.html">Home</a></li>
+                    <li><a href="layout-grid.html">Blog</a>
+                        <ul class="mini-sub-menu">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="layout-grid.html">Blog</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contacto</a></li>#}
+                </ul>
+            </div>
+
+            <div class="head-right">
+                <em class="fa fa-phone-square feat-color"></em> Telf: 204-8420
+            </div>
+        </div>
+    </nav>
+    <!-- End Post Header -->
+
+
+</header>
+<!-- End Header -->
+
+
+
+
+
+<!-- Start Feature Slider -->
+<div class="rev_slider_wrapper">
+    <div id="slider1" class="rev_slider rev-slider-standard"  data-version="5.0">
+        <ul>
+            <li data-fstransition="slidedown" data-fsmasterspeed="300" data-transition="fade">
+                <!-- MAIN IMAGE -->
+                <img src="img/mock.jpg" alt="slide" data-bgposition="center center" data-kenburns="on" data-duration="9000" data-ease="Power2.easeInOut" data-scalestart="110" data-scaleend="133" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="2" class="rev-slidebg" data-no-retina>
+                <!-- LAYER NR. 1 -->
+                <h1 class="tp-caption"
+                    data-x="left" data-hoffset="0"
+                    data-y="top" data-voffset="90"
+                    data-whitespace="nowrap"
+                    data-transform_idle="o:1;sX:1;sY:1;skX:0px;skY:0px;rX:0;rY:0;rZ:0;z:0;"
+                    data-transform_in="x:250px;y:0px;rX:0deg;rY:0deg;rZ:0deg;sX:1;sY:1;skX:0px;skY:0px;opacity:0;s:300;e:Power2.easeInOut;"
+                    data-transform_out="x:-250px;y:0px;rX:{0,0};rY:{0,0};sX:1;sY:1;opacity:0;s:300;e:Power3.easeInOut"
+                    data-color="#ffffff"
+                    data-fontsize="44"
+                    data-lineheight="46"
+                    data-width="auto"
+                    data-height="auto"
+                    data-start="300">
+                    ACADEMIA,<br/>Escuela Deportiva del IPD <small class="feat-color"></small>
+                </h1>
+
+                <!-- LAYER NR. 1 -->
+                <p class="tp-caption"
+                   data-x="left" data-hoffset="0"
+                   data-y="top" data-voffset="225"
+                   data-whitespace="nowrap"
+                   data-transform_idle="o:1;sX:1;sY:1;skX:0px;skY:0px;rX:0;rY:0;rZ:0;z:0;"
+                   data-transform_in="x:250px;y:0px;rX:0deg;rY:0deg;rZ:0deg;sX:1;sY:1;skX:0px;skY:0px;opacity:0;s:300;e:Power2.easeInOut;"
+                   data-transform_out="x:-250px;y:0px;rX:{0,0};rY:{0,0};sX:1;sY:1;opacity:0;s:300;e:Power3.easeInOut"
+                   data-color="#ffffff"
+                   data-fontsize="17"
+                   data-lineheight="22"
+                   data-width="auto"
+                   data-height="auto"
+                   data-start="500">
+                    “En 2021 el IPD es reconocido a nivel nacional e internacional, <br/>
+                    como el ente rector que contribuye a incrementar el desempeño <br/>
+                    del deporte peruano en eventos competitivos<br/>
+                </p>
+
+                <!-- LAYER NR. 1 -->
+                <div class="tp-caption"
+                     data-x="left" data-hoffset="0"
+                     data-y="top" data-voffset="335"
+                     data-whitespace="normal"
+                     data-transform_idle="o:1;sX:1;sY:1;skX:0px;skY:0px;rX:0;rY:0;rZ:0;z:0;"
+                     data-transform_in="x:250px;y:0px;rX:0deg;rY:0deg;rZ:0deg;sX:1;sY:1;skX:0px;skY:0px;opacity:0;s:300;e:Power2.easeInOut;"
+                     data-transform_out="x:-250px;y:0px;rX:{0,0};rY:{0,0};sX:1;sY:1;opacity:0;s:300;e:Power3.easeInOut"
+                     data-start="700">
+                    <a href="{{ path('inscripciones') }}" class="btn btn-success">Inscríbete aquí</a>
+                </div>
+
+                <!-- LAYER NR. 1 -->
+                <!--div class="tp-caption"
+                    data-x="left" data-hoffset="150"
+                    data-y="top" data-voffset="335"
+                    data-whitespace="normal"
+                    data-transform_idle="o:1;sX:1;sY:1;skX:0px;skY:0px;rX:0;rY:0;rZ:0;z:0;"
+                    data-transform_in="x:250px;y:0px;rX:0deg;rY:0deg;rZ:0deg;sX:1;sY:1;skX:0px;skY:0px;opacity:0;s:300;e:Power2.easeInOut;"
+                    data-transform_out="x:-250px;y:0px;rX:{0,0};rY:{0,0};sX:1;sY:1;opacity:0;s:300;e:Power3.easeInOut"
+                    data-start="700">
+                    <a href="index.html#" class="btn btn-warning">Read More</a>
+                </div>-->
+            </li><!--/. END SLIDE -->
+
+
+
+            <li data-transition="fade">
+                <!-- MAIN IMAGE -->
+                <img src="img/mock2.jpg" alt="slide2" data-bgposition="center center" data-kenburns="on" data-duration="9000" data-ease="Power2.easeInOut" data-scalestart="110" data-scaleend="133" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="2" class="rev-slidebg" data-no-retina>
+                <!-- LAYER NR. 1 -->
+                <h1 class="tp-caption"
+                    data-x="left" data-hoffset="0"
+                    data-y="top" data-voffset="90"
+                    data-whitespace="nowrap"
+                    data-transform_idle="o:1;sX:1;sY:1;skX:0px;skY:0px;rX:0;rY:0;rZ:0;z:0;"
+                    data-transform_in="x:250px;y:0px;rX:0deg;rY:0deg;rZ:0deg;sX:1;sY:1;skX:0px;skY:0px;opacity:0;s:300;e:Power2.easeInOut;"
+                    data-transform_out="x:-250px;y:0px;rX:{0,0};rY:{0,0};sX:1;sY:1;opacity:0;s:300;e:Power3.easeInOut"
+                    data-color="#ffffff"
+                    data-fontsize="44"
+                    data-lineheight="46"
+                    data-width="auto"
+                    data-height="auto"
+                    data-start="300">
+                    Deporte para todos <br/><small class="feat-color">   #UnaSolaFuerza</small>
+                </h1>
+
+                <!-- LAYER NR. 1 -->
+                <p class="tp-caption"
+                   data-x="left" data-hoffset="0"
+                   data-y="top" data-voffset="225"
+                   data-whitespace="nowrap"
+                   data-transform_idle="o:1;sX:1;sY:1;skX:0px;skY:0px;rX:0;rY:0;rZ:0;z:0;"
+                   data-transform_in="x:250px;y:0px;rX:0deg;rY:0deg;rZ:0deg;sX:1;sY:1;skX:0px;skY:0px;opacity:0;s:300;e:Power2.easeInOut;"
+                   data-transform_out="x:-250px;y:0px;rX:{0,0};rY:{0,0};sX:1;sY:1;opacity:0;s:300;e:Power3.easeInOut"
+                   data-color="#ffffff"
+                   data-fontsize="17"
+                   data-lineheight="22"
+                   data-width="auto"
+                   data-height="auto"
+                   data-start="500">
+                    El Instituto Peruano del Deporte en coordinación con los<br/>
+                    organismos del Sistema Deportivo Nacional, formula <br/>
+                    e imparte la política deportiva, recreativa<br/>
+                    y de educación física.<br/>
+                </p>
+
+                <!-- LAYER NR. 1 -->
+                <div class="tp-caption"
+                     data-x="left" data-hoffset="0"
+                     data-y="top" data-voffset="335"
+                     data-whitespace="normal"
+                     data-transform_idle="o:1;sX:1;sY:1;skX:0px;skY:0px;rX:0;rY:0;rZ:0;z:0;"
+                     data-transform_in="x:250px;y:0px;rX:0deg;rY:0deg;rZ:0deg;sX:1;sY:1;skX:0px;skY:0px;opacity:0;s:300;e:Power2.easeInOut;"
+                     data-transform_out="x:-250px;y:0px;rX:{0,0};rY:{0,0};sX:1;sY:1;opacity:0;s:300;e:Power3.easeInOut"
+                     data-start="700">
+                    <a href="{{ path('inscripciones') }}" class="btn btn-success">Inscríbete aquí</a>
+                </div>
+
+                <!-- LAYER NR. 1 -->
+                <!--div class="tp-caption"
+                    data-x="left" data-hoffset="150"
+                    data-y="top" data-voffset="335"
+                    data-whitespace="normal"
+                    data-transform_idle="o:1;sX:1;sY:1;skX:0px;skY:0px;rX:0;rY:0;rZ:0;z:0;"
+                    data-transform_in="x:250px;y:0px;rX:0deg;rY:0deg;rZ:0deg;sX:1;sY:1;skX:0px;skY:0px;opacity:0;s:300;e:Power2.easeInOut;"
+                    data-transform_out="x:-250px;y:0px;rX:{0,0};rY:{0,0};sX:1;sY:1;opacity:0;s:300;e:Power3.easeInOut"
+                    data-start="700">
+                    <a href="index.html#" class="btn btn-warning">Read More</a>
+                </div>-->
+            </li><!--/. END SLIDE -->
+
+        </ul>
+    </div><!-- END REVOLUTION SLIDER -->
+</div><!-- END OF SLIDER WRAPPER -->
+
+
+
+
+
+<!-- Start Main Content -->
+<section class="main-content">
+    <div class="container body-content">
+
+        <!-- Start Widget Section -->
+        <section class="row page-section">
+            <div class="col-sm-6">
+                <h3>Ver disciplinas</h3>
+                <p class="lead">Accede para ver todos las disciplinas disponibles que tenemos en la academia</p>
+                <!--<p>Morbi leo risus, porta ac conse ctetur ac, vestibulum at erosite. Aenean lacinia bibendum nulsed consectetur. Nullam quis risusa eget urna mollis s lacus vel augue laoreet rutrum fauci leo Duis mollis, est non commodo luctus, nisi erat porttito. Fusce dapibus, tellus ac cursus conbi leo risus…</p>
+                <p><img src="img/signature.png" alt="Signature" style="max-width: 207px;" /></p>
+                <p class="feat-color"><strong>Joseph Gamble</strong> <em>- Club President</em></p>-->
+                <a type="submit" class="btn btn-success" href="{{ path('inscripciones') }}">Ver mas</a>
+            </div>
+
+            <div class="col-sm-3">
+                <div class="widget widget-single-post">
+                    <h3>Noticias Recientes</h3>
+                    <a href="post-standard.html">
+                        <div class="hover-box-container">
+                            <div class="hover-box">
+                                <em class="date">17 March</em>
+                                <img src="img/fill-3.jpg"  alt="Fill" />
+                            </div>
+                        </div>
+                        <h4>Nominados al club deportivo del año</h4>
+                        <p>Después de un largo año de muchos triunfos...</p>
+
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-sm-3">
+                <!-- Start Widget -->
+                <div class="widget widget-post-thumbs">
+                    <h3>Próximos Eventos</h3>
+                    <ul class="list-post-thumbs">
+                        <li>
+                            <a href="event.html">
+                                <img src="img/thumb-3.jpg" alt="fill" />
+                                <div>
+                                    <p><strong>Perú vs Nueva Zelanda (Ida)</strong></p>
+                                    <p>Un importantísimo partido que s...<br/>
+                                        <small class="meta-text">11 Novi</small></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="event.html">
+                                <img src="img/thumb-1.jpg" alt="fill" />
+                                <div>
+                                    <p><strong>Perú vs Nueva Zelanda (Vuelta)</strong></p>
+                                    <p>La vuelta en casa, un partido lleno d...<br/>
+                                        <small class="meta-text">27 Novi</small></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="event.html">
+                                <img src="img/thumb-2.jpg" alt="fill" />
+                                <div>
+                                    <p><strong>Nuevo Integrante</strong></p>
+                                    <p>El equipo deportivo de rugby a...<br/>
+                                        <small class="meta-text">03 Novi</small></p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </div><!-- /.container -->
+</section><!-- /.main-content -->
+
+
+
+
+<hr class="rule-fat"/>
+<!-- Start Parallax Container -->
+<section class="container full-width parallax-background" style="background-image: url(img/parallax-bg2.jpg); min-height: 330px;" data-stellar-background-ratio="0.75">
+    <div class="parallax-element vert-middle container">
+        <div class="quotes-carousel">
+            <div class="item">
+                <br/>
+                <blockquote class="col-xs-9 text-center scale-125 float-none">
+                    "Los viejos deben temblar ante los niños, porque la generación que se levanta es siempre acusadora y juez de la generación que desciende".
+                    <footer>
+                        <cite class="feat-color" title="Emil Zatopek">Manuel Gonzales Prada -
+                            <small class="feat-color">
+                                <em class="fa fa-star"></em><em class="fa fa-star"></em><em class="fa fa-star"></em>
+                            </small>
+                        </cite>
+                    </footer>
+                </blockquote>
+            </div>
+            <div class="item">
+                <br/>
+                <blockquote class="col-xs-9 text-center scale-125 float-none">
+                    "Si volviera a nacer, escogería al Perú como país y al fútbol como profesión"
+                    <footer>
+                        <cite class="feat-color" title="Rick Hooley">Teófilo Cubillas -
+                            <small class="feat-color">
+                                <em class="fa fa-star"></em><em class="fa fa-star"></em><em class="fa fa-star"></em><em class="fa fa-star"></em><em class="fa fa-star"></em>
+                            </small>
+                        </cite>
+                    </footer>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+</section>
+<hr class="rule-fat"/>
+
+
+
+
+<!-- Start Main Content -->
+<section class="main-content">
+    <div class="container body-content">
+
+        <!-- Start Widget Section -->
+        <section class="page-section">
+            <div class="clearfix pull-container h3">
+                <h3 class="pull-left">Disciplinas</h3>
+                <!-- Isotope Filters -->
+                <ul class="list-filter list-inline filter-button-group pull-right">
+                    <li><a class="btn active" data-filter="">All</a></li>
+                    <li><a class="btn" data-filter=".ftr-1">1st Half</a></li>
+                    <li><a class="btn" data-filter=".ftr-2">2nd Half</a></li>
+                </ul>
+            </div>
+
+            <div class="grid grid-col-5">
+                <div class="grid-sizer"></div>
+                <div class="gutter-sizer"></div>
+
+                <!-- Gallery Item -->
+                <div class="grid-item ftr-1 hover-box-container hb-effect-fade">
+                    <a href="img/fill-4.jpg" class="fancybox hover-box" data-fancybox-group="gallery1" title="Boxeo">
+                        <img src="img/fill-4.jpg" alt="alt" />
+                        <div class="hover-box-content-container">
+                            <div class="hover-box-content">
+                                <em class="fa fa-search"></em>
+                            </div>
+                        </div>
+                        <div class="caption-text">Boxeo</div>
+                    </a>
+                </div>
+
+                <!-- Gallery Item -->
+                <div class="grid-item ftr-2 hover-box-container hb-effect-fade">
+                    <a href="img/fill-2.jpg" class="fancybox hover-box" data-fancybox-group="gallery1" title="Karate">
+                        <img src="img/fill-2.jpg" alt="alt" />
+                        <div class="hover-box-content-container">
+                            <div class="hover-box-content">
+                                <em class="fa fa-search"></em>
+                            </div>
+                        </div>
+                        <div class="caption-text">Karate</div>
+                    </a>
+                </div>
+
+                <!-- Gallery Item -->
+                <div class="grid-item ftr-1 hover-box-container hb-effect-fade">
+                    <a href="img/fill-1.jpg" class="fancybox hover-box" data-fancybox-group="gallery1" title="Atletismo">
+                        <img src="img/fill-1.jpg" alt="alt" />
+                        <div class="hover-box-content-container">
+                            <div class="hover-box-content">
+                                <em class="fa fa-search"></em>
+                            </div>
+                        </div>
+                        <div class="caption-text">Atletismo</div>
+                    </a>
+                </div>
+
+                <!-- Gallery Item -->
+                <div class="grid-item ftr-1 hover-box-container hb-effect-fade">
+                    <a href="img/fill-3.jpg" class="fancybox hover-box" data-fancybox-group="gallery1" title="Fútbol">
+                        <img src="img/fill-3.jpg" alt="alt" />
+                        <div class="hover-box-content-container">
+                            <div class="hover-box-content">
+                                <em class="fa fa-search"></em>
+                            </div>
+                        </div>
+                        <div class="caption-text">Fútbol</div>
+                    </a>
+                </div>
+
+                <!-- Gallery Item -->
+                <div class="grid-item ftr-1 hover-box-container hb-effect-fade">
+                    <a href="img/fill-5.jpg" class="fancybox hover-box" data-fancybox-group="gallery1" title="VoleyBall">
+                        <img src="img/fill-5.jpg" alt="alt" />
+                        <div class="hover-box-content-container">
+                            <div class="hover-box-content">
+                                <em class="fa fa-search"></em>
+                            </div>
+                        </div>
+                        <div class="caption-text">VoleyBall</div>
+                    </a>
+                </div>
+
+                <!-- Gallery Item -->
+                <div class="grid-item ftr-2 hover-box-container hb-effect-fade">
+                    <a href="img/fill-6.jpg" class="fancybox hover-box" data-fancybox-group="gallery1" title="BasketBall">
+                        <img src="img/fill-6.jpg" alt="alt" />
+                        <div class="hover-box-content-container">
+                            <div class="hover-box-content">
+                                <em class="fa fa-search"></em>
+                            </div>
+                        </div>
+                        <div class="caption-text">BasketBall</div>
+                    </a>
+                </div>
+
+                <!-- Gallery Item -->
+                <div class="grid-item hover-box-container hb-effect-fade">
+                    <a href="img/fill-7.jpg" class="fancybox hover-box" data-fancybox-group="gallery1" title="Ajedrez">
+                        <img src="img/fill-7.jpg" alt="alt" />
+                        <div class="hover-box-content-container">
+                            <div class="hover-box-content">
+                                <em class="fa fa-search"></em>
+                            </div>
+                        </div>
+                        <div class="caption-text">Ajedrez</div>
+                    </a>
+                </div>
+
+                <!-- Gallery Item -->
+                <div class="grid-item ftr-2 hover-box-container hb-effect-fade">
+                    <a href="img/fill-8.jpg" class="fancybox hover-box" data-fancybox-group="gallery1" title="Paleta Frontón">
+                        <img src="img/fill-8.jpg" alt="alt" />
+                        <div class="hover-box-content-container">
+                            <div class="hover-box-content">
+                                <em class="fa fa-search"></em>
+                            </div>
+                        </div>
+                        <div class="caption-text">Paleta Frontón</div>
+                    </a>
+                </div>
+
+                <!-- Gallery Item -->
+                <div class="grid-item ftr-1 hover-box-container hb-effect-fade">
+                    <a href="img/fill-9.jpg" class="fancybox hover-box" data-fancybox-group="gallery1" title="Lucha Libre">
+                        <img src="img/fill-9.jpg" alt="alt" />
+                        <div class="hover-box-content-container">
+                            <div class="hover-box-content">
+                                <em class="fa fa-search"></em>
+                            </div>
+                        </div>
+                        <div class="caption-text">Lucha Libre</div>
+                    </a>
+                </div>
+
+                <!-- Gallery Item -->
+                <div class="grid-item ftr-2 hover-box-container hb-effect-fade">
+                    <a href="img/fill-10.jpg" class="fancybox hover-box" data-fancybox-group="gallery1" title="Esgrima">
+                        <img src="img/fill-10.jpg" alt="alt" />
+                        <div class="hover-box-content-container">
+                            <div class="hover-box-content">
+                                <em class="fa fa-search"></em>
+                            </div>
+                        </div>
+                        <div class="caption-text">Esgrima</div>
+                    </a>
+                </div>
+
+
+            </div><!-- /.grid -->
+            <div class="text-center">
+                <small class="meta-text"><em class="fa fa-users"></em> <strong>Pictured:</strong> Johny, Jacob, Max, Stewart, Billy, Cameron &amp; Jason</small>
+            </div>
+            <br/>
+        </section>
+
+    </div><!-- /.container -->
+</section><!-- /.main-content -->
+
+
+
+
+<hr class="rule-fat"/>
+<section class="section-supporters section-fill">
+    <div class="main-content container">
+        <h3 class="scale-125">Fomentaremos el deporte a miles de peruanos, <span>Todos somos uno.</span></h3>
+        <p>Destacamos por el desempeño profesional basado en la observancia de valores, principios y deberes que garantizan el profesionalismo de cada trabajador. </p>
+    </div>
+
+
+    <ul class="list-thumbs">
+        <li><a href="teams-member.html"><img src="img/face.jpg" alt="mock" /></a></li>
+        <li><a href="teams-member.html"><img src="img/face2.jpg" alt="mock" /></a></li>
+        <li><a href="teams-member.html"><img src="img/face3.jpg" alt="mock" /></a></li>
+        <li><a href="teams-member.html"><img src="img/face4.jpg" alt="mock" /></a></li>
+        <li><a href="teams-member.html"><img src="img/face5.jpg" alt="mock" /></a></li>
+        <li><a href="teams-member.html"><img src="img/face6.jpg" alt="mock" /></a></li>
+        <li><a href="teams-member.html"><img src="img/face7.jpg" alt="mock" /></a></li>
+        <li><a href="teams-member.html"><img src="img/face8.jpg" alt="mock" /></a></li>
+        <li><a href="teams-member.html"><img src="img/face9.jpg" alt="mock" /></a></li>
+        <li><a href="teams-member.html"><img src="img/face10.jpg" alt="mock" /></a></li>
+        <li><a href="teams-member.html"><img src="img/face11.jpg" alt="mock" /></a></li>
+        <li><a href="teams-member.html"><img src="img/face.jpg" alt="mock" /></a></li>
+        <li><a href="teams-member.html"><img src="img/face2.jpg" alt="mock" /></a></li>
+        <li><a href="teams-member.html"><img src="img/face3.jpg" alt="mock" /></a></li>
+        <li><a href="teams-member.html"><img src="img/face4.jpg" alt="mock" /></a></li>
+        <li><a href="teams-member.html"><img src="img/face5.jpg" alt="mock" /></a></li>
+        <li><a href="teams-member.html"><img src="img/face6.jpg" alt="mock" /></a></li>
+        <li><a href="teams-member.html"><img src="img/face7.jpg" alt="mock" /></a></li>
+        <li><a href="teams-member.html"><img src="img/face8.jpg" alt="mock" /></a></li>
+        <li><a href="teams-member.html"><img src="img/face9.jpg" alt="mock" /></a></li>
+        <li><a href="teams-member.html"><img src="img/face10.jpg" alt="mock" /></a></li>
+        <li><a href="teams-member.html"><img src="img/face11.jpg" alt="mock" /></a></li>
+        <li><a href="teams-member.html"><img src="img/face.jpg" alt="mock" /></a></li>
+        <li><a href="teams-member.html"><img src="img/face2.jpg" alt="mock" /></a></li>
+        <li><a href="teams-member.html"><img src="img/face3.jpg" alt="mock" /></a></li>
+        <li><a href="teams-member.html"><img src="img/face4.jpg" alt="mock" /></a></li>
+        <li><a href="teams-member.html"><img src="img/face5.jpg" alt="mock" /></a></li>
+        <li><a href="teams-member.html"><img src="img/face6.jpg" alt="mock" /></a></li>
+        <li><a href="teams-member.html"><img src="img/face7.jpg" alt="mock" /></a></li>
+        <li><a href="teams-member.html"><img src="img/face8.jpg" alt="mock" /></a></li>
+        <li><a href="teams-member.html"><img src="img/face9.jpg" alt="mock" /></a></li>
+        <li><a href="teams-member.html"><img src="img/face10.jpg" alt="mock" /></a></li>
+        <li><a href="teams-member.html"><img src="img/face11.jpg" alt="mock" /></a></li>
+        <li><a href="teams-member.html"><img src="img/face.jpg" alt="mock" /></a></li>
+        <li><a href="teams-member.html"><img src="img/face2.jpg" alt="mock" /></a></li>
+        <li><a href="teams-member.html"><img src="img/face3.jpg" alt="mock" /></a></li>
+        <li><a href="teams-member.html"><img src="img/face4.jpg" alt="mock" /></a></li>
+        <li><a href="teams-member.html"><img src="img/face5.jpg" alt="mock" /></a></li>
+        <li><a href="teams-member.html"><img src="img/face6.jpg" alt="mock" /></a></li>
+        <li><a href="teams-member.html"><img src="img/face7.jpg" alt="mock" /></a></li>
+        <li><a href="teams-member.html"><img src="img/face8.jpg" alt="mock" /></a></li>
+        <li><a href="teams-member.html"><img src="img/face9.jpg" alt="mock" /></a></li>
+        <li><a href="teams-member.html"><img src="img/face10.jpg" alt="mock" /></a></li>
+        <li><a href="teams-member.html"><img src="img/face11.jpg" alt="mock" /></a></li>
+        <li><a href="teams-member.html"><img src="img/face.jpg" alt="mock" /></a></li>
+        <li><a href="teams-member.html"><img src="img/face2.jpg" alt="mock" /></a></li>
+        <li><a href="teams-member.html"><img src="img/face3.jpg" alt="mock" /></a></li>
+        <li><a href="teams-member.html"><img src="img/face4.jpg" alt="mock" /></a></li>
+        <li><a href="teams-member.html"><img src="img/face5.jpg" alt="mock" /></a></li>
+        <li><a href="teams-member.html"><img src="img/face6.jpg" alt="mock" /></a></li>
+        <li><a href="teams-member.html"><img src="img/face7.jpg" alt="mock" /></a></li>
+        <li><a href="teams-member.html"><img src="img/face8.jpg" alt="mock" /></a></li>
+        <li><a href="teams-member.html"><img src="img/face9.jpg" alt="mock" /></a></li>
+        <li><a href="teams-member.html"><img src="img/face10.jpg" alt="mock" /></a></li>
+        <li><a href="teams-member.html"><img src="img/face11.jpg" alt="mock" /></a></li>
+    </ul>
+
+    <!-- <div class="main-content container">
+        <a href="pricing.html" class="btn btn-success"><em class="fa fa-user"></em> Join Our Club</a>
+        <a href="contact.html" class="btn btn-warning"><em class="fa fa-heart"></em> Make Donation</a>
+    </div> -->
+</section>
+
+
+
+
+<!--Start Footer -->
+<div id="footer">
+    <!-- Start Pre Footer
+    <footer class="pre-footer">
+        <div class="container">
+            <div class="foot-left">
+                <ol class="breadcrumb">
+                    <li><a href="#"><em class="fa fa-home"></em></a></li>
+                    <li><a href="#">Our Club</a></li>
+                    <li class="active">Events</li>
+                </ol>
+            </div>
+
+            <div class="foot-right">
+
+            </div>
+        </div>
+    </footer>
+     -->
+
+
+
+    <!-- Start Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <!-- Start Row -->
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="widget widget-contact">
+                        <h3>Contactos</h3>
+                        <ul class="list-styled list-bordered">
+                            <li><strong>Teléfono:</strong><br/>204-8420</li>
+                            <!--li><strong>Dirección:</strong><br/>Calle Madre de Dios N° 463 - Cercado de Lima </li>-->
+                            <li><a href="index.html#">https://mail.ipd.gob.pe/</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="widget widget-text">
+                        <h3>Nuestra Misión</h3>
+                        <p>Somos el ente rector del Sistema Deportivo Nacional; promotor, facilitador, articulador del desarrollo del deporte en el país, que contribuye a la mejora de la calidad de vida de la sociedad peruana; comprometidos con la excelencia, la mejora continua y la obtención de resultados sostenibles en el tiempo.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="widget widget-paired-list">
+                        <h3>Horarios</h3>
+                        <ul class="list-paired">
+                            <li><em class="fa fa-clock-o scale-80 feat-color"></em> Lunes <span>9am - 10pm</span></li>
+                            <li><em class="fa fa-clock-o scale-80 feat-color"></em> Jueves-Viernes <span>9am - 9pm</span></li>
+                            <li><em class="fa fa-clock-o scale-80 feat-color"></em> Sábado-Domingo <span>7am - 9pm</span></li>
+                            <li><em class="fa fa-clock-o scale-80 feat-color"></em> Feriados <span>9am - 1pm</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="widget widget-brand-address">
+                        <h3><img class="logo-img" src="img/logo@2x.png" alt="Logo" /></h3>
+                        <ul class="list-styled list-bordered">
+                            <li><strong>Dirección:</strong><br/>Calle Madre de Dios N° 463 - Cercado de Lima </li>
+                            <li><a href="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d28369.415587766056!2d152.98820641500242!3d-27.276331333808365!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b93fb9c9442c901%3A0x10b5aa2f23d9e4e1!2sAshford+Circuit%2C+Petrie+QLD+4502!5e0!3m2!1sen!2sau!4v1406620130126" class="fancybox fancybox.iframe">Vista en mapa</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div><!--/.row -->
+        </div>
+    </footer>
+
+
+
+    <!-- Start Post Footer -->
+    <footer class="post-footer">
+        <div class="container">
+            <div class="foot-left">
+                <div>&copy; Dalgom <span class="copy-year"></span>. All rights reserved.</div>
+            </div>
+
+            <div class="foot-right">
+                <ul class="social-links">
+                    <li><a href="index.html#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="index.html#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="index.html#"><i class="fa fa-globe"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</div><!--/footer -->
+
+
+
+<!-- JavaScript
+   ================================================== -->
+<script src="jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="library/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="library/bs/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="library/js/ie10-viewport-bug-workaround.js"></script>
+
+<script type="text/javascript" src="library/js/isotope.pkgd.min.js"></script>
+<script type="text/javascript" src="library/js/imagesloaded.pkgd.min.js"></script>
+<script type="text/javascript" src="library/js/owl-carousel/owl.carousel.min.js"></script>
+<script type="text/javascript" src="library/js/cleantabs.jquery.js"></script>
+<script type="text/javascript" src="library/js/fancybox/jquery.fancybox.js%3Fv=2.1.4"></script>
+<script type="text/javascript" src="library/js/jquery.scrollUp.min.js"></script>
+<script type="text/javascript" src="library/js/valign.js"></script>
+<script type="text/javascript" src="library/js/anijs/anijs-min.js"></script>
+<script type="text/javascript" src="library/js/anijs/anijs-helper-scrollreveal.js"></script>
+<script type="text/javascript" src="library/js/anijs/anijs-helper-dom.js"></script>
+<script type="text/javascript" src="library/js/menuzord.js"></script>
+<script type="text/javascript" src="library/js/jquery.stickit.js"></script>
+<script type="text/javascript" src="library/js/scrollIt.min.js"></script>
+<script type="text/javascript" src="library/js/jquery.countdown.min.js"></script>
+<script type="text/javascript" src="library/js/tooltipster/tooltipster.bundle.min.js"></script>
+<script type="text/javascript" src="library/js/footer-reveal.min.js"></script>
+<script type="text/javascript" src="library/js/headhesive.min.js"></script>
+<script type="text/javascript" src="library/js/jquery.stellar.min.js"></script>
+<script type="text/javascript" src="library/js/jquery.countTo.js"></script>
+<script type="text/javascript" src="library/js/typed.min.js"></script>
+<script type="text/javascript" src="library/js/jquery.waypoints.min.js"></script>
+<script type="text/javascript" src="library/js/slidebars/slidebars.min.js"></script>
+<script type="text/javascript" src="library/js/tendina.min.js"></script>
+<script type="text/javascript" src="library/js/jquery.sidr.js"></script>
+<script type="text/javascript" src="library/js/pace.js"></script>
+<script type="text/javascript" src="library/js/list.js"></script>
+<script type="text/javascript" src="library/js/jquery.fitvids.js"></script>
+
+<!-- Forms JS Files -->
+<script type="text/javascript" src="library/js/skyforms/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="library/js/skyforms/js/jquery.form.min.js"></script>
+<script type="text/javascript" src="library/js/skyforms/js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="library/js/skyforms/js/jquery.maskedinput.min.js"></script>
+<script type="text/javascript" src="library/js/skyforms/js/jquery.modal.js"></script>
+<!--[if lt IE 10]>
+<script type="text/javascript" src="./library/js/skyforms/js/jquery.placeholder.min.js"></script>
+<![endif]-->
+<!--[if lt IE 9]>
+<script type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- RS5.0 Core JS Files -->
+<script type="text/javascript" src="library/js/revolution/js/jquery.themepunch.tools.min.js%3Frev=5.0"></script>
+<script type="text/javascript" src="library/js/revolution/js/jquery.themepunch.revolution.min.js%3Frev=5.0"></script>
+<script type="text/javascript" src="library/js/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script type="text/javascript" src="library/js/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script type="text/javascript" src="library/js/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+<script type="text/javascript" src="library/js/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+
+<!-- Scripts Go -->
+<script src="js/validate-contact.js"></script>
+<script src="js/scripts.js"></script>
+</body>
+</html>

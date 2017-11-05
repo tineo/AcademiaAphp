@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="AppBundle\Entity\Disciplinaevento" table="disciplinaevento">
+    <id name="iddisciplinaevento" type="integer" column="iddisciplinaevento">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="iddisciplina" type="integer" column="iddisciplina" nullable="true">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="idevento" type="integer" column="idevento" nullable="true">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="inicio" type="datetime" column="inicio" nullable="true"/>
+    <field name="fin" type="datetime" column="fin" nullable="true"/>
+    <field name="capacidadmax" type="integer" column="capacidadmax" nullable="true">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="estado" type="integer" column="estado" nullable="true">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+  </entity>
+</doctrine-mapping>

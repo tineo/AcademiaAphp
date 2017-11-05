@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="AppBundle\Entity\Evento" table="evento">
+    <id name="idevento" type="integer" column="idevento">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="idubigeo" type="integer" column="idubigeo" nullable="true">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="fechadecreacion" type="date" column="fechadecreacion" nullable="true"/>
+    <field name="fechainicio" type="date" column="fechainicio" nullable="true"/>
+    <field name="fechafin" type="date" column="fechafin" nullable="true"/>
+    <field name="idcomplejo" type="integer" column="idcomplejo" nullable="true">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="objetivo" type="string" column="objetivo" length="250" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="cantidadeportistas" type="integer" column="cantidadeportistas" nullable="true">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="edadmin" type="integer" column="edadmin" nullable="true">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="edadmax" type="integer" column="edadmax" nullable="true">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="organizador" type="string" column="organizador" length="30" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+  </entity>
+</doctrine-mapping>

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Design Lots">
+    <meta name="theme-color" content="#CB2F1D" />
+    <link rel="icon" href="favicon.ico">
+
+    <title>Academia</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" type="text/css" href="library/bs/css/bootstrap.min.css">
+
+    <!-- Menu Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="library/css/menuzord/menuzord.css">
+    <link rel="stylesheet" type="text/css" href="library/css/menuzord/menuzord-animations.css">
+    <link rel="stylesheet" type="text/css" href="library/css/menuzord/skins/menuzord-border-top.css">
+
+    <!-- RS5.0 Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="library/js/revolution/css/settings.css">
+    <link rel="stylesheet" type="text/css" href="library/js/revolution/css/layers.css">
+    <link rel="stylesheet" type="text/css" href="library/js/revolution/css/navigation.css">
+
+    <!-- Forms -->
+    <link rel="stylesheet" type="text/css" href="library/js/skyforms/css/sky-forms.css">
+
+    <!-- Style Sheets -->
+    <link rel="stylesheet" type="text/css" href="library/css/ie10-viewport-bug-workaround.css">
+    <link rel="stylesheet" type="text/css" href="library/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="library/css/iconmoon.css">
+    <link rel="stylesheet" type="text/css" href="library/js/owl-carousel/owl.css">
+    <link rel="stylesheet" type="text/css" href="library/js/fancybox/jquery.fancybox.css">
+    <link rel="stylesheet" type="text/css" href="library/js/anijs/anicollection.css">
+    <link rel="stylesheet" type="text/css" href="library/js/tooltipster/tooltipster.bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="library/js/slidebars/slidebars.css">
+    <link rel="stylesheet" type="text/css" href="library/css/library.css">
+    <link rel="stylesheet" type="text/css" href="library/css/responsive.css">
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <!-- Place RTL Style Sheet here -->
+
+
+    <!--[if lt IE 9]>
+    <script src="./library/bs/js/html5shiv.min.js"></script>
+    <script src="./library/bs/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+
+
+<body class="">
+
+
+
+
+
+
+<!-- Start Header -->
+<header id="header">
+
+
+    <!-- Start Main Header -->
+    <nav class="main-header header-reveal">
+        <div class="container">
+            <!-- Start Menu -->
+            <div id="menuzord" class="menuzord">
+                <div class="head-left">
+                    <a href="{{ path('homepage') }}" class="menuzord-brand">
+                        <!-- Sport <div class="tag-line">Sporting Club Theme</div> -->
+                        <img class="logo-img" src="img/logo@2x.png" alt="Logo" />
+                    </a>
+                </div>
+
+            </div><!--/.menuzord -->
+        </div>
+    </nav>
+    <!-- End Main Header -->
+
+
+    <!-- Start Post Header -->
+    <nav class="post-header">
+        <div class="container">
+            <div class="head-left">
+                <ul class="mini-nav">
+                        
+                </ul>
+            </div>
+
+            <div class="head-right">
+                <em class="fa fa-phone-square feat-color"></em> Telf: 204-8420
+            </div>
+        </div>
+    </nav>
+    <!-- End Post Header -->
+
+
+</header>
+<!-- End Header -->
+
+
+<!-- Start Main Content -->
+<section class="main-content">
+    <div class="container body-content">
+        <h3>Inscripcion de beneficiarios</h3>
+        <div class="row">
+
+            <section class="col-md-4">
+                <label class="input" for="apellidopa">Apellido Paterno</label>
+                <input type="text" class="form-control" placeholder="Apellidos" id="apellidopa" name="apellidopa">
+            </section>
+            <section class="col-md-4">
+                <label class="input" for="apellidoma">Apellido Materno</label>
+                <input type="text" class="form-control" placeholder="Apellidos" id="apellidoma" name="apellidoma">
+            </section>
+            <section class="col-md-4">
+                <label class="input" for="nombres">Nombres</label>
+                <input type="text" class="form-control" placeholder="Nombres" id="nombres" name="nombres">
+            </section>
+
+        </div>
+
+
+        <div class="row">
+            <section class="col-md-6">
+                <label class="input" for="dni">DNI</label>
+                <input type="text" class="form-control" placeholder="DNI" id="dni" name="dni">
+            </section>
+            <section class="col-md-6">
+
+                <label class="input">Sexo</label>
+                <br/>
+                <label class="radio inline">
+                    <input type="radio" name="gender" value="male" checked>
+                    <span> Hombre </span>
+                </label>
+                <label class="radio inline">
+                    <input type="radio" name="gender" value="female">
+                    <span> Mujer </span>
+                </label>
+
+            </section>
+
+        </div>
+
+        <div class="row">
+            <section class="col-md-2">
+                <label class="input"> Discapacidad</label>
+                <br/>
+
+                <label class="radio inline">
+                    <input type="radio" name="discapacidad" value="si" checked>
+                    <span> Si </span>
+                </label>
+                <label class="radio inline">
+                    <input type="radio" name="discapacidad" value="no">
+                    <span> No </span>
+                </label>
+            </section>
+            <section class="col-md-4">
+
+                <label class="input" for="otros">¿Cual?</label>
+                <input type="text" class="form-control"  id="otros" name="otros">
+
+            </section>
+            <section class="col-md-6">
+                <label class="input"> Fecha de nacimiento</label>
+                <input type="date"  class="form-control" name="bday">
+            </section>
+
+        </div>
+
+        <div class="row">
+
+            <section class="col-md-6">
+                <label class="input"> Direccion </label>
+                <input type="text"  class="form-control" name="direccion">
+            </section>
+
+            <section class="col-md-6">
+                <label class="input">Complejo o sede</label>
+                <select class="form-control">
+                {% for complejo in complejos %}
+                    <option>{{ complejo.nombre }}</option>
+                {% endfor  %}
+                </select>
+            </section>
+        </div>
+
+        <div class="row">
+            <section class="col-md-12">
+                <label class="input">Horario</label>
+                <select class="form-control">
+                    <option>L - V : 9am - 2pm</option>
+                    <option>M - V : 7am - 3pm</option>
+                    <option>J - S : 10am - 5pm</option>
+
+                </select>
+            </section>
+        </div>
+
+        <h4>Apoderado</h4>
+
+        <div class="row">
+            <section class="col-md-4">
+                <label class="input" for="anombres">Nombres</label>
+                <input type="text" class="form-control" placeholder="Nombres" id="anombres" name="nombres">
+            </section>
+            <section class="col-md-4">
+                <label class="input" for="aapellidopa">Apellido Paterno</label>
+                <input type="text" class="form-control" placeholder="Apellidos" id="aapellidopa" name="apellidopa">
+            </section>
+            <section class="col-md-4">
+                <label class="input" for="aapellidoma">Apellido Materno</label>
+                <input type="text" class="form-control" placeholder="Apellidos" id="aapellidoma" name="apellidoma">
+            </section>
+
+        </div>
+
+        <div class="row">
+            <section class="col-md-4">
+                <label class="input" for="aafinidad">Afinidad</label>
+                <input type="text" class="form-control" placeholder="Afinidad" id="aafinidad" name="nombres">
+            </section>
+            <section class="col-md-4">
+                <label class="input" for="atelefono">Telefono</label>
+                <input type="text" class="form-control" placeholder="Telefono" id="atelefono" name="apellidos">
+            </section>
+
+            <section class="col-md-4">
+                <label class="input" for="anombres">DNI</label>
+                <input type="text" class="form-control" placeholder="DNI" id="adni" name="nombres">
+            </section>
+
+
+        </div>
+
+
+        <div class="row">
+            <section class="col-md-12" style=": center">
+                <br />
+                <button type="submit" class="btn btn-success">Registrar</button>
+            </section>
+        </div>
+
+
+
+
+
+    </div><!-- /.container -->
+</section><!-- /.main-content -->
+
+
+
+
+
+
+
+
+<!--Start Footer -->
+<div id="footer">
+    <!-- Start Pre Footer
+    <footer class="pre-footer">
+        <div class="container">
+            <div class="foot-left">
+                <ol class="breadcrumb">
+                    <li><a href="#"><em class="fa fa-home"></em></a></li>
+                    <li><a href="#">Our Club</a></li>
+                    <li class="active">Events</li>
+                </ol>
+            </div>
+
+            <div class="foot-right">
+
+            </div>
+        </div>
+    </footer>
+     -->
+
+
+
+
+
+
+    <!-- Start Post Footer -->
+    <footer class="post-footer">
+        <div class="container">
+            <div class="foot-left">
+                <div>&copy; DesignLots <span class="copy-year"></span>. All rights reserved.</div>
+            </div>
+
+            <div class="foot-right">
+                <ul class="social-links">
+                    <li><a href="index.html#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="index.html#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="index.html#"><i class="fa fa-globe"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</div><!--/footer -->
+
+
+
+<!-- JavaScript
+   ================================================== -->
+<script src="../../../ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="library/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="library/bs/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="library/js/ie10-viewport-bug-workaround.js"></script>
+
+<script type="text/javascript" src="library/js/isotope.pkgd.min.js"></script>
+<script type="text/javascript" src="library/js/imagesloaded.pkgd.min.js"></script>
+<script type="text/javascript" src="library/js/owl-carousel/owl.carousel.min.js"></script>
+<script type="text/javascript" src="library/js/cleantabs.jquery.js"></script>
+<script type="text/javascript" src="library/js/fancybox/jquery.fancybox.js%3Fv=2.1.4"></script>
+<script type="text/javascript" src="library/js/jquery.scrollUp.min.js"></script>
+<script type="text/javascript" src="library/js/valign.js"></script>
+<script type="text/javascript" src="library/js/anijs/anijs-min.js"></script>
+<script type="text/javascript" src="library/js/anijs/anijs-helper-scrollreveal.js"></script>
+<script type="text/javascript" src="library/js/anijs/anijs-helper-dom.js"></script>
+<script type="text/javascript" src="library/js/menuzord.js"></script>
+<script type="text/javascript" src="library/js/jquery.stickit.js"></script>
+<script type="text/javascript" src="library/js/scrollIt.min.js"></script>
+<script type="text/javascript" src="library/js/jquery.countdown.min.js"></script>
+<script type="text/javascript" src="library/js/tooltipster/tooltipster.bundle.min.js"></script>
+<script type="text/javascript" src="library/js/footer-reveal.min.js"></script>
+<script type="text/javascript" src="library/js/headhesive.min.js"></script>
+<script type="text/javascript" src="library/js/jquery.stellar.min.js"></script>
+<script type="text/javascript" src="library/js/jquery.countTo.js"></script>
+<script type="text/javascript" src="library/js/typed.min.js"></script>
+<script type="text/javascript" src="library/js/jquery.waypoints.min.js"></script>
+<script type="text/javascript" src="library/js/slidebars/slidebars.min.js"></script>
+<script type="text/javascript" src="library/js/tendina.min.js"></script>
+<script type="text/javascript" src="library/js/jquery.sidr.js"></script>
+<script type="text/javascript" src="library/js/pace.js"></script>
+<script type="text/javascript" src="library/js/list.js"></script>
+<script type="text/javascript" src="library/js/jquery.fitvids.js"></script>
+
+<!-- Forms JS Files -->
+<script type="text/javascript" src="library/js/skyforms/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="library/js/skyforms/js/jquery.form.min.js"></script>
+<script type="text/javascript" src="library/js/skyforms/js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="library/js/skyforms/js/jquery.maskedinput.min.js"></script>
+<script type="text/javascript" src="library/js/skyforms/js/jquery.modal.js"></script>
+<!--[if lt IE 10]>
+<script type="text/javascript" src="./library/js/skyforms/js/jquery.placeholder.min.js"></script>
+<![endif]-->
+<!--[if lt IE 9]>
+<script type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- RS5.0 Core JS Files -->
+<script type="text/javascript" src="library/js/revolution/js/jquery.themepunch.tools.min.js%3Frev=5.0"></script>
+<script type="text/javascript" src="library/js/revolution/js/jquery.themepunch.revolution.min.js%3Frev=5.0"></script>
+<script type="text/javascript" src="library/js/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script type="text/javascript" src="library/js/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script type="text/javascript" src="library/js/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+<script type="text/javascript" src="library/js/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+
+<!-- Scripts Go -->
+<script src="js/validate-contact.js"></script>
+<script src="js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="AppBundle\Entity\Alumno" table="alumno">
+    <id name="idalumno" type="integer" column="idalumno">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="idpersona" type="integer" column="idpersona" nullable="true">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="codigoalumno" type="integer" column="codigoalumno" nullable="true">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="idapoderado" type="integer" column="idapoderado" nullable="true">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="discapacidad" type="boolean" column="discapacidad" nullable="true"/>
+    <field name="tipodiscapacidad" type="string" column="tipodiscapacidad" length="12" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="foto" type="string" column="foto" length="68" nullable="true">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="talla" type="float" column="talla" precision="10" scale="0" nullable="true"/>
+    <field name="peso" type="float" column="peso" precision="10" scale="0" nullable="true"/>
+    <field name="estado" type="integer" column="estado" nullable="true">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="etapa" type="string" column="etapa" length="20" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+  </entity>
+</doctrine-mapping>
